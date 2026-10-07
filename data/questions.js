@@ -1694,5 +1694,1045 @@ window.FINAL_EXAM_DATA = [
       "C"
     ],
     "explanation": "The sample calls glFlush() after both drawing functions."
+  },
+  {
+    "id": "visual-midterm-1",
+    "number": 1,
+    "globalNumber": 93,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The color blue is represented by the command glColor3f(1.0f,0.0f,0.0f)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-2",
+    "number": 2,
+    "globalNumber": 94,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "OpenGL uses an object-oriented framework to make its functions easy to use.",
+    "options": [
+      "False",
+      "True"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-3",
+    "number": 3,
+    "globalNumber": 95,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The command used to enable line style pattern in OpenGL",
+    "options": [
+      "GL_LINE_STIPPLE",
+      "GL_LINE",
+      "GL_LINE_LOOP",
+      "GL_LINE_PATTERN"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-4",
+    "number": 4,
+    "globalNumber": 96,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "If the number of vertices specified for GL_TRIANGLES is not in multiples of 3. What will happen to the rendered triangle.",
+    "options": [
+      "A triangle will be rendered and the excess vertex will be ignored",
+      "A compilation error will occur",
+      "Nothing will be rendered",
+      "A runtime error will occur"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-5",
+    "number": 5,
+    "globalNumber": 97,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The glutInitWindowSize(param1,param2) parameters specifies the __________________ of a window",
+    "options": [
+      "Width, Height",
+      "Height, Width",
+      "Bottom, Top",
+      "Top, Bottom"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-6",
+    "number": 6,
+    "globalNumber": 98,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "A command line option needed for the successful compilation of an OpenGL application.",
+    "options": [
+      "-lopengl",
+      "-lfreeglut",
+      "-lgraphics",
+      "-lfreegl"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-7",
+    "number": 7,
+    "globalNumber": 99,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "How many parameters does glutFullScreen have?",
+    "options": [
+      "0",
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-8",
+    "number": 8,
+    "globalNumber": 100,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The color green is represented by the command glColor3f(0.0f,1.0f,0.0f)",
+    "options": [
+      "False",
+      "True"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-9",
+    "number": 9,
+    "globalNumber": 101,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "placeholder",
+    "text": "",
+    "options": [],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-10",
+    "number": 10,
+    "globalNumber": 102,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What data does the second parameter for the glVertexPointer() is for",
+    "options": [
+      "The data type of each coordinate in the array",
+      "A pointer to the first element of the vertex array",
+      "The byte offset between consecutive vertices",
+      "The number of coordinates per vertex"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-11",
+    "number": 11,
+    "globalNumber": 103,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "To call the animateString() function every second we used the function parameters",
+    "options": [
+      "glutTimerFunc(1,animateString,2);",
+      "glutTimerFunc(10000,animateString,2);",
+      "glutTimerFunc(1000,animateString,2);",
+      "glutTimerFunc(100,animateString,2);"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-12",
+    "number": 12,
+    "globalNumber": 104,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What is true to the following statement",
+    "options": [
+      "OpenGL can generate high quality color images",
+      "OpenGL is Window System Independent",
+      "All of the mentioned",
+      "OpenGL is Operating System Independet"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-13",
+    "number": 13,
+    "globalNumber": 105,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "OpenGLs architecture is a client-server model where the client is the application and the server is the_______________",
+    "options": [
+      "Video Card",
+      "Device Driver",
+      "Code Server",
+      "Internet Server"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-14",
+    "number": 14,
+    "globalNumber": 106,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "In rendering the vertex arrays using glDrawArrays() function. The last parameter for the function indicates the.",
+    "options": [
+      "Specifies the starting index in the enabled arrays",
+      "Specifies the number of indices to be rendered.",
+      "None of the mentioned",
+      "What kind of primitives to render"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-15",
+    "number": 15,
+    "globalNumber": 107,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "In creating an OpenGL application in Dev-C++ what type of project should be selected",
+    "options": [
+      "DLL",
+      "Console Application",
+      "Windows Application",
+      "Static Library"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-16",
+    "number": 16,
+    "globalNumber": 108,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "How man bits does the glLineStipple() function pattern represent to describe a line pattern.",
+    "options": [
+      "64",
+      "16",
+      "8",
+      "32"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-17",
+    "number": 17,
+    "globalNumber": 109,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "In the OpenGL Rendering pipeline it is where the parts of the primitive that are determined to be potentially visible are sent to a fixed-function subsystem called the rasterizer.",
+    "options": [
+      "Rasterizer",
+      "Primitive Assembly",
+      "Per Sample Operations"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-18",
+    "number": 18,
+    "globalNumber": 110,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "OpenGL is a part of the _____________ Visual Computing Ecosystem",
+    "options": [
+      "3D Assets",
+      "Parallel Computation",
+      "3D Graphics",
+      "Portable XR"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-19",
+    "number": 19,
+    "globalNumber": 111,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "When a mouse button is pressed it will send two state signals on the callback function",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-20",
+    "number": 20,
+    "globalNumber": 112,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The time parameter in glutTimerFunc sets the callback to trigger in the span of",
+    "options": [
+      "Second",
+      "Millisecond",
+      "Nanosecond",
+      "Minute"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-21",
+    "number": 21,
+    "globalNumber": 113,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What is the maximum number of statements that can be present in a C function.?",
+    "options": [
+      "64",
+      "256",
+      "None of the above",
+      "128"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-22",
+    "number": 22,
+    "globalNumber": 114,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "In the glColor3f() function what does the 2nd parameter represent",
+    "options": [
+      "Blue",
+      "Red",
+      "Alpha",
+      "Green"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-23",
+    "number": 23,
+    "globalNumber": 115,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "It determines the address of a variable, and you can then assign that address to a pointer variable",
+    "options": [
+      "dot operator",
+      "& operator",
+      "* operator",
+      "{}"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-24",
+    "number": 24,
+    "globalNumber": 116,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The glutInitWindowPosition(0,0) makes the upper left corner of the window as a reference to be placed at what position in the screen.",
+    "options": [
+      "Upper Left",
+      "Bottom Left",
+      "Bottom Right",
+      "Upper Right"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-25",
+    "number": 25,
+    "globalNumber": 117,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The color black is represented by the command glColor3f(1.0f,1.0f,1.0f)",
+    "options": [
+      "False",
+      "True"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-26",
+    "number": 26,
+    "globalNumber": 118,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What OpenGL attribute command sets the width of the lines.",
+    "options": [
+      "glLineWeight()",
+      "glLine()",
+      "glLineSize()",
+      "glLineWidth()"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-27",
+    "number": 27,
+    "globalNumber": 119,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The color white is represented by the command glColor3f(0.0f,0.0f,0.0f)",
+    "options": [
+      "False",
+      "True"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-28",
+    "number": 28,
+    "globalNumber": 120,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What OpenGL constant is used to activate the use of colors as arrays in your application.",
+    "options": [
+      "GL_COLORS",
+      "GL_COLOR_ARRAY",
+      "GL_COLORARRAY",
+      "GL_COLOR_VECTOR"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-29",
+    "number": 29,
+    "globalNumber": 121,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "In OpenGL high-performance memory refers to your GPUs memory.",
+    "options": [
+      "False",
+      "True"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-30",
+    "number": 30,
+    "globalNumber": 122,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "In the OpenGL Rendering pipeline it is the stage that handles the processing of individual vertices.",
+    "options": [
+      "Primitive Assembly",
+      "Per-Sample Operations",
+      "Vertex Shader"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-31",
+    "number": 31,
+    "globalNumber": 123,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Shaders are required to create an OpenGL application",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-32",
+    "number": 32,
+    "globalNumber": 124,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What does the number suffix in the glVertex2f() function is referring to?",
+    "options": [
+      "No of function parameters",
+      "None of the above.",
+      "No of colors to be used",
+      "The maximum value of the coordinates"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-33",
+    "number": 33,
+    "globalNumber": 125,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "In the OpenGL Rendering pipeline it is where increases the number of polygons to smoothen out the object.",
+    "options": [
+      "Primitive Assembly",
+      "Geometry Shader",
+      "Rasterization",
+      "TEsselation"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-34",
+    "number": 34,
+    "globalNumber": 126,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "Choose a correct statement about C Language Functions.",
+    "options": [
+      "A function name can start with an Underscore( _ ) or A to Z or a to z.",
+      "All the above.",
+      "A function name can not be same as a predefined C Keyword.",
+      "Default return type of any function is an Integer."
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-35",
+    "number": 35,
+    "globalNumber": 127,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "What does the letter f suffix in the glVertex2f() function is referring to?",
+    "options": [
+      "Tells that you are specifiying a position",
+      "The last character f is mandatory for using glVertex",
+      "The data type of the coordinates",
+      "None of the above"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-36",
+    "number": 36,
+    "globalNumber": 128,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "In the OpenGL Rendering pipeline it is where which is the grouping of vertices into lines and triangles.",
+    "options": [
+      "TEsselation",
+      "Geometry Shader",
+      "Rasterization",
+      "Primitive Assembly"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-37",
+    "number": 37,
+    "globalNumber": 129,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "The coordinates of x and y in the glutKeyboardFunc() tells s the position of row and colum on the screen where the key was pressed",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-38",
+    "number": 38,
+    "globalNumber": 130,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "GL_LINES needs two glVertex2f() commands to render a line.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-39",
+    "number": 39,
+    "globalNumber": 131,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "placeholder",
+    "text": "",
+    "options": [],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-40",
+    "number": 40,
+    "globalNumber": 132,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "What data does the third parameter for the glVertexPointer() is for",
+    "options": [
+      "The data type of each coordinate in the array",
+      "The number of coordinates per vertex",
+      "The byte offset between consecutive vertices",
+      "A pointer to the first element of the vertex array"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-41",
+    "number": 41,
+    "globalNumber": 133,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "If GL_QUADS receives 14 vertices, how many complete quadrilaterals are rendered, and how many vertices are left unused?",
+    "options": [
+      "14 quadrilaterals rendered",
+      "4 quadrilaterals rendered; 2 vertices unused",
+      "3 quadrilaterals rendered; 2 vertices unused",
+      "3 quadrilaterals rendered; 0 vertices unused"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-42",
+    "number": 42,
+    "globalNumber": 134,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "A startup wants its 3D application to run on VR headsets, mobile GPUs, and desktop cards from different vendors without vendor-specific graphics rewrites. Which aspect of the Khronos ecosystem directly supports this goal?",
+    "options": [
+      "Object-oriented API design",
+      "Open, royalty-free, cross-platform standards",
+      "A single proprietary vendor SDK",
+      "OpenGL's version 1.0 release date"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-43",
+    "number": 43,
+    "globalNumber": 135,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "The Khronos Visual Computing Ecosystem is best described as ____.",
+    "options": [
+      "a proprietary Microsoft graphics driver",
+      "a programming language for games",
+      "a single graphics card model",
+      "a set of open, royalty-free standards enabling hardware acceleration and cross-platform compatibility"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-44",
+    "number": 44,
+    "globalNumber": 136,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "What coordinate values does a 3D vertex require, and what do they represent?",
+    "options": [
+      "x, y, z — position along three spatial axes",
+      "r, g, b — color channels",
+      "width, height — a 2D bounding box",
+      "u, v — texture coordinates only"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-45",
+    "number": 45,
+    "globalNumber": 137,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Which primitive draws a fan of triangles that share edges and also share one common vertex?",
+    "options": [
+      "GL_TRIANGLE_STRIP",
+      "GL_QUADS",
+      "GL_POLYGON",
+      "GL_TRIANGLE_FAN"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-46",
+    "number": 46,
+    "globalNumber": 138,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "A developer wants to procedurally generate extra geometry (e.g., for fur or explosion effects) from existing primitives before rasterization. Which optional pipeline stage should they use?",
+    "options": [
+      "Vertex Specification",
+      "Geometry Shader",
+      "Vertex Shader",
+      "Per-Sample Operations"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-47",
+    "number": 47,
+    "globalNumber": 139,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Which primitive draws individual convex quadrilaterals, one for each group of four vertices?",
+    "options": [
+      "GL_POLYGON",
+      "GL_QUAD_STRIP",
+      "GL_TRIANGLE_FAN",
+      "GL_QUADS"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-48",
+    "number": 48,
+    "globalNumber": 140,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "A student's display() function contains glClear, glBegin/glEnd, and vertex calls, but the window stays blank until they click or resize it. What is most likely missing, and why?",
+    "options": [
+      "glBegin() — without it vertices are undefined",
+      "glFlush() — without it, buffered commands may not execute/display immediately",
+      "glutCreateWindow() — without it there's no window at all",
+      "glutInit() — without it nothing compiles"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-49",
+    "number": 49,
+    "globalNumber": 141,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "In RGBA mode, a color is specified by three intensities for Red, Green, and Blue, plus a fourth value that represents ____.",
+    "options": [
+      "Axis, controlling orientation",
+      "Alpha, controlling transparency",
+      "Ambient, controlling lighting",
+      "Angle, controlling rotation"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-50",
+    "number": 50,
+    "globalNumber": 142,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "A developer keeps opening M3, M4, etc. as separate VS Code workspaces instead of the single SOURCE CODE\\ root folder, and later finds the build task missing in each module folder. What is the most likely cause?",
+    "options": [
+      "Each module needs its own compiler installed",
+      "VS Code workspaces don't support C++ at all",
+      "GLUT doesn't support multiple modules",
+      "The .vscode configuration lives at the SOURCE CODE\\ root; opening a subfolder directly bypasses it"
+    ],
+    "answer": [
+      "D"
+    ]
+  },
+  {
+    "id": "visual-midterm-51",
+    "number": 51,
+    "globalNumber": 143,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Which function can reduce repeated vertex data by drawing through indices?",
+    "options": [
+      "glDrawArrays()",
+      "glDrawElements()",
+      "glColorPointer()",
+      "glVertexPointer()"
+    ],
+    "answer": [
+      "B"
+    ]
+  },
+  {
+    "id": "visual-midterm-52",
+    "number": 52,
+    "globalNumber": 144,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Which call draws the four quad vertices in the rectangle() vertex-array sample?",
+    "options": [
+      "glDrawArrays(GL_QUADS,0,4)",
+      "glDrawElements(GL_QUADS,4,0,0)",
+      "glBegin(GL_QUADS,4)",
+      "glDrawArrays(GL_TRIANGLES,0,4)"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-53",
+    "number": 53,
+    "globalNumber": 145,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "Bitmap fonts are particularly suitable for small readable text in 2D overlays or ____.",
+    "options": [
+      "vertex buffers",
+      "index arrays",
+      "HUDs",
+      "depth tests"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-54",
+    "number": 54,
+    "globalNumber": 146,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "Which GLUT font is a scalable stroke font rendered using line segments?",
+    "options": [
+      "GLUT_BITMAP_HELVETICA_12",
+      "GLUT_STROKE_ROMAN",
+      "GLUT_BITMAP_TIMES_ROMAN_10",
+      "GLUT_BITMAP_9_BY_15"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-55",
+    "number": 55,
+    "globalNumber": 147,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "The immediate-mode point() sample specifies how many point vertices?",
+    "options": [
+      "3",
+      "2",
+      "20",
+      "4"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-56",
+    "number": 56,
+    "globalNumber": 148,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Buffer objects were introduced in OpenGL version ____ according to the slides.",
+    "options": [
+      "4.5",
+      "1.0",
+      "1.5",
+      "2.5"
+    ],
+    "answer": [
+      "C"
+    ]
+  },
+  {
+    "id": "visual-midterm-57",
+    "number": 57,
+    "globalNumber": 149,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "choice",
+    "text": "Which function sets the initial GLUT window position?",
+    "options": [
+      "glutInitWindowPosition()",
+      "glutInitWindowSize()",
+      "glRasterPos2f()",
+      "glutPostRedisplay()"
+    ],
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "id": "visual-midterm-58",
+    "number": 58,
+    "globalNumber": 150,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "In defaultDisplay(), which functions are called after the color is set in the immediate-mode sample?",
+    "options": [
+      "glVertexPointer() and glColorPointer()",
+      "point() and triangle()",
+      "glutKeyboardFunc() and glFlush()",
+      "triangleleft() and rectangle()"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-59",
+    "number": 59,
+    "globalNumber": 151,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "Which set names all four triangle functions in that sample?",
+    "options": [
+      "triangleleft, triangleright, triangleup, triangledown",
+      "triangle1, triangle2, triangle3, triangle4",
+      "left, right, top, bottom",
+      "displayTriangles, rectangle, point, triangle"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-60",
+    "number": 60,
+    "globalNumber": 152,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "ungraded",
+    "text": "How many triangle functions are called by defaultDisplay() in the multi-primitive sample?",
+    "options": [
+      "3",
+      "2",
+      "12",
+      "4"
+    ],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-61",
+    "number": 61,
+    "globalNumber": 153,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "placeholder",
+    "text": "",
+    "options": [],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-62",
+    "number": 62,
+    "globalNumber": 154,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "placeholder",
+    "text": "",
+    "options": [],
+    "answer": []
+  },
+  {
+    "id": "visual-midterm-63",
+    "number": 63,
+    "globalNumber": 155,
+    "assessment": "MIDTERM EXAM",
+    "category": "MIDTERM EXAM: Graphics and Visual Programming",
+    "type": "essay",
+    "text": "Linda initially creates an OpenGL application using glBegin(), glVertex(), and glEnd() to draw several geometric primitives. The application is later improved by adding keyboard and mouse interaction through GLUT callbacks and by converting the graphical data into vertex arrays.\n\nExplain how these improvements change the structure, interactivity, and rendering efficiency of the OpenGL application. \n\nIn your answer, discuss:\n\n• how vertices and geometric primitives are used to construct graphical objects;\n\n• how GLUT callback functions allow the program to respond to keyboard or mouse events; and\n\n• why vertex arrays can be more efficient than repeatedly specifying vertices using glBegin() and glEnd().\n\nSupport your explanation using appropriate OpenGL or GLUT functions discussed in Modules 1–4.",
+    "options": [],
+    "answer": []
   }
 ];

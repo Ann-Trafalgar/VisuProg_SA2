@@ -9,18 +9,18 @@
   const storageKey = 'visualquest-sa2-progress-v1';
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-  const assessmentOrder = ['TAB 1', 'TAB 2', 'MODULE 03', 'MODULE 04'];
+  const assessmentOrder = ['TAB 1', 'TAB 2', 'MODULE 03', 'MODULE 04', 'MIDTERM EXAM'];
   const assessments = [
     {
       id: 'all',
       group: 'final',
       title: 'Visual Programming - Complete',
-      subtitle: 'All 92 questions from the review PDF and Modules 03-04.',
+      subtitle: '155 slots across the PDF, modules, and Midterm Exam; 131 have answer keys.',
       questions: finalExamQuestions
     },
     ...assessmentOrder.map(assessment => ({
       id: assessment.toLowerCase().replace(/\s+/g, '-'),
-      group: 'fa',
+      group: assessment === 'MIDTERM EXAM' ? 'midterms' : 'fa',
       title: assessment,
       subtitle: finalExamQuestions.find(question => question.assessment === assessment)?.category.replace(`${assessment}: `, '') || 'Visual Programming assessment',
       questions: finalExamQuestions.filter(question => question.assessment === assessment)
@@ -142,7 +142,6 @@
       const shuffleMode = $('shuffleMode').value;
       state.shuffleQuestions = shuffleMode === 'questions' || shuffleMode === 'both';
       state.shuffleChoices = shuffleMode === 'choices' || shuffleMode === 'both';
-      state.pauseWrong = $('pauseWrongToggle').checked;
       if (state.shuffleQuestions) state.order = shuffled(state.order);
       persist();
     }
@@ -186,14 +185,23 @@
     $('feedback').className = 'feedback';
     $('feedback').replaceChildren();
     $('nextButton').hidden = true;
-    $('submitButton').hidden = Boolean(savedAnswer);
-    $('clearButton').hidden = Boolean(savedAnswer);
+    $('submitButton').hidden = true;
+    $('clearButton').hidden = true;
     $('answerArea').closest('.answer-panel').classList.toggle('answered', Boolean(savedAnswer));
 
-    if (question.type === 'match') renderMatching(question, savedAnswer);
+    if (question.type === 'placeholder') {
+      $('answerTitle').textContent = 'Question unavailable';
+      $('answerHint').textContent = 'This slot could not be displayed in the source HTML. Continue without affecting your score.';
+      $('nextButton').hidden = false;
+      $('nextButton').textContent = 'Continue →';
+    } else if (question.type === 'essay') {
+      renderEssay(question, savedAnswer);
+      $('nextButton').hidden = false;
+      $('nextButton').textContent = 'Save response and continue →';
+    } else if (question.type === 'match') renderMatching(question, savedAnswer);
     else renderChoices(question, savedAnswer);
 
-    if (savedAnswer) {
+    if (savedAnswer && question.type !== 'placeholder' && question.type !== 'essay') {
       renderFeedback(question, savedAnswer.correct);
       $('nextButton').hidden = false;
       $('nextButton').textContent = answerCount() === questions.length ? 'See results →' : 'Next question →';
@@ -228,10 +236,24 @@
     appendProse(text.slice(cursor));
   }
 
+  function renderEssay(question, savedAnswer) {
+    $('answerTitle').textContent = 'Written response';
+    $('answerHint').textContent = 'Write your response below. This item is saved but not automatically graded.';
+    const textarea = document.createElement('textarea');
+    textarea.id = 'essayResponse';
+    textarea.className = 'essay-response';
+    textarea.rows = 8;
+    textarea.placeholder = 'Write your explanation here…';
+    textarea.value = savedAnswer?.response || '';
+    textarea.setAttribute('aria-label', 'Written response');
+    textarea.addEventListener('input', () => { state.answered[question.id] = { correct: null, response: textarea.value }; persist(); });
+    $('answerArea').append(textarea);
+  }
+
   function renderChoices(question, savedAnswer) {
     const needed = question.answer.length;
     $('answerTitle').textContent = needed > 1 ? `Select ${needed} answers` : 'Select one answer';
-    $('answerHint').textContent = needed > 1 ? `Choose exactly ${needed} options.` : 'Choose the best answer below.';
+    $('answerHint').textContent = question.type === 'ungraded' ? 'The HTML does not include an answer key for this question. Your choice will be saved without scoring.' : needed > 1 ? `Choose exactly ${needed} options.` : 'Tap an answer to check it instantly.';
 
     if (!state.choiceOrders[question.id]) {
       const indexes = question.options.map((_, index) => index);
@@ -265,15 +287,18 @@
 
       if (savedAnswer) {
         const originalLetter = letters[originalIndex];
-        if (question.answer.includes(originalLetter)) button.classList.add('correct-answer');
-        else if (selected) button.classList.add('wrong-answer');
+        if (question.type !== 'ungraded' && question.answer.includes(originalLetter)) button.classList.add('correct-answer');
+        else if (selected && question.type !== 'ungraded') button.classList.add('wrong-answer');
       } else {
         button.addEventListener('click', () => {
-          if (needed === 1) selectedChoiceIndexes = [originalIndex];
+          if (needed <= 1) selectedChoiceIndexes = [originalIndex];
           else if (selectedChoiceIndexes.includes(originalIndex)) selectedChoiceIndexes = selectedChoiceIndexes.filter(index => index !== originalIndex);
           else if (selectedChoiceIndexes.length < needed) selectedChoiceIndexes.push(originalIndex);
-          renderChoiceSelection(list);
-          updateSubmit(question);
+          if (needed <= 1) checkAnswer();
+          else {
+            renderChoiceSelection(list);
+            updateSubmit(question);
+          }
         });
       }
       list.append(button);
@@ -343,7 +368,10 @@
     const question = questions[state.index];
     let correct;
     const stored = {};
-    if (question.type === 'match') {
+    if (question.type === 'ungraded') {
+      correct = null;
+      stored.selectedChoiceIndexes = selectedChoiceIndexes.slice();
+    } else if (question.type === 'match') {
       correct = question.pairs.every((pair, index) => pair[1] === selectedMatches[index]);
       stored.selectedMatches = selectedMatches.slice();
     } else {
@@ -353,15 +381,21 @@
     }
     state.answered[question.id] = { correct, ...stored };
     persist();
-    tone(correct);
+    if (correct !== null) tone(correct);
     renderQuestion();
-    if (correct || !state.pauseWrong) {
-      advanceId = setTimeout(goNext, correct ? 1200 : 2300);
+    if (correct) {
+      $('nextButton').hidden = true;
+      advanceId = setTimeout(goNext, 2000);
     }
   }
 
   function renderFeedback(question, correct) {
     const feedback = $('feedback');
+    if (question.type === 'ungraded') {
+      feedback.className = 'feedback show neutral';
+      feedback.textContent = 'Choice saved. The source HTML does not show the correct answer for this question.';
+      return;
+    }
     feedback.className = `feedback show ${correct ? 'good' : 'bad'}`;
     const heading = document.createElement('strong');
     heading.textContent = correct ? 'Correct — nice work.' : 'Not quite. Review the correct answer below.';
@@ -401,6 +435,15 @@
 
   function goNext() {
     clearTimeout(advanceId);
+    const current = questions[state.index];
+    if (current.type === 'placeholder' && !state.answered[current.id]) {
+      state.answered[current.id] = { correct: null };
+      persist();
+    }
+    if (current.type === 'essay' && !state.answered[current.id]) {
+      state.answered[current.id] = { correct: null, response: $('essayResponse')?.value || '' };
+      persist();
+    }
     if (answerCount() === questions.length) {
       finish();
       return;
@@ -426,10 +469,10 @@
       button.className = 'picker-btn';
       const displayNumber = state.assessmentId === 'all' ? question.globalNumber : question.number;
       button.textContent = displayNumber;
-      button.title = `${question.assessment} question ${question.number}`;
+      button.title = `${question.assessment} question ${question.number}${question.type === 'placeholder' ? ' (unavailable)' : question.type === 'ungraded' ? ' (ungraded)' : question.type === 'essay' ? ' (essay)' : ''}`;
       button.classList.toggle('current', index === state.index);
       const answer = state.answered[question.id];
-      if (answer) button.classList.add(answer.correct ? 'correct' : 'wrong');
+      if (answer && answer.correct !== null) button.classList.add(answer.correct ? 'correct' : 'wrong');
       if (state.flags.includes(question.id)) button.classList.add('flagged');
       button.addEventListener('click', () => {
         clearTimeout(advanceId);
@@ -445,7 +488,8 @@
   function renderAssessmentPicker() {
     const targets = {
       final: $('finalAssessmentGrid'),
-      fa: $('faAssessmentGrid')
+      fa: $('faAssessmentGrid'),
+      midterms: $('midtermsAssessmentGrid')
     };
     Object.values(targets).forEach(target => target.replaceChildren());
 
@@ -485,8 +529,8 @@
     clearInterval(timerId);
     clearTimeout(advanceId);
     const correct = correctCount();
-    const total = questions.length;
-    const percent = Math.round((correct / total) * 100);
+    const total = questions.filter(question => question.type === 'choice' || question.type === 'match').length;
+    const percent = total ? Math.round((correct / total) * 100) : 0;
     $('finalPercent').textContent = `${percent}%`;
     $('finalScore').textContent = `${correct} / ${total} points`;
     $('correctStat').textContent = correct;
@@ -542,7 +586,7 @@
   });
   $('retryButton').addEventListener('click', () => begin(false, state.assessmentId));
   $('reviewButton').addEventListener('click', () => {
-    const missed = questions.filter(question => !state.answered[question.id]?.correct).map(question => question.id);
+    const missed = questions.filter(question => (question.type === 'choice' || question.type === 'match') && !state.answered[question.id]?.correct).map(question => question.id);
     if (missed.length) begin(false, state.assessmentId, missed);
   });
 
@@ -584,7 +628,6 @@
     applyOrder();
     $('resumeButton').hidden = false;
     $('resumeButton').textContent = `Resume ${state.scopeLabel}`;
-    $('pauseWrongToggle').checked = state.pauseWrong !== false;
     $('shuffleMode').value = state.shuffleQuestions ? (state.shuffleChoices ? 'both' : 'questions') : (state.shuffleChoices ? 'choices' : 'off');
   }
 })();

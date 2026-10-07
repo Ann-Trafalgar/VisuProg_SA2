@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A 92-question Visual Programming reviewer covering the original PDF and Modules 03 and 04.">
+  <meta name="description" content="A Visual Programming reviewer covering the original PDF, Modules 03 and 04, and the Midterm Exam HTML.">
   <title>VisualQuest - Visual Programming Reviewer</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -16,7 +16,7 @@
       <span class="brand-mark">V</span><span>VisualQuest</span>
     </a>
     <div class="top-actions">
-      <span class="source-pill">92 questions · 5 study sets</span>
+      <span class="source-pill">155 slots · 6 study sets</span>
       <button class="icon-button" id="themeButton" type="button" aria-label="Toggle dark mode">☾</button>
       <button class="icon-button" id="soundButton" type="button" aria-label="Toggle sound">♪</button>
     </div>
@@ -27,7 +27,7 @@
       <div class="hero-copy">
         <span class="eyebrow">VISUAL PROGRAMMING REVIEWER</span>
         <h1>Choose what you<br><span>want to review.</span></h1>
-        <p>Study all 92 questions in one session, or choose questions from the original PDF, Module 03, or Module 04. The 40 new questions practice concepts and sample code from the two modules.</p>
+        <p>Study the original PDF, Modules 03–04, and the Midterm Exam together or separately. The exam HTML has 39 keyed choices, 19 choices without a revealed answer key, four unavailable slots, and one essay.</p>
 
         <label class="setting-card shuffle-mode-control">
           <span><strong>Shuffle mode</strong><small>Choose exactly what gets randomized</small></span>
@@ -39,20 +39,14 @@
           </select>
         </label>
 
-        <label class="setting-card toggle-setting">
-          <input id="pauseWrongToggle" type="checkbox" checked>
-          <span class="toggle-track"><i></i></span>
-          <span><strong>Pause after wrong answers</strong><small>Continue only when you are ready</small></span>
-        </label>
-
         <div class="hero-actions resume-actions">
           <button class="secondary-button" id="resumeButton" type="button" hidden>Resume saved assessment</button>
         </div>
 
         <div class="stats-strip">
-          <div><strong>92</strong><span>Unique questions</span></div>
-          <div><strong>5</strong><span>Study sets</span></div>
-          <div><strong>2 modules</strong><span>New material</span></div>
+          <div><strong>131</strong><span>Scored questions</span></div>
+          <div><strong>6</strong><span>Study sets</span></div>
+          <div><strong>1 exam</strong><span>New material</span></div>
         </div>
       </div>
 
@@ -86,6 +80,10 @@
           <div class="assessment-grid" id="faAssessmentGrid"></div>
         </div>
 
+        <div class="assessment-section">
+          <h3>Midterm Exam</h3>
+          <div class="assessment-grid" id="midtermsAssessmentGrid"></div>
+        </div>
       </section>
     </section>
 
@@ -114,8 +112,8 @@
           <h2 id="answerTitle">Select one answer</h2>
           <p id="answerHint">Choose the best answer below.</p>
           <div id="answerArea"></div>
-          <div class="edit-row"><button id="clearButton" type="button">Clear selection</button></div>
-          <button class="submit-button" id="submitButton" type="button" disabled>Check answer</button>
+          <div class="edit-row" hidden><button id="clearButton" type="button">Clear selection</button></div>
+          <button class="submit-button" id="submitButton" type="button" hidden disabled>Check answer</button>
           <div class="feedback" id="feedback" role="status"></div>
           <button class="next-button" id="nextButton" type="button" hidden>Next question →</button>
         </aside>
