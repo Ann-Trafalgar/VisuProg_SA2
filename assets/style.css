@@ -209,3 +209,6 @@ button:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,va
 .essay-response:focus{outline:2px solid var(--teal);outline-offset:2px}
 .feedback.neutral{background:#edf4f5;color:var(--ink)}
 [data-theme="dark"] .feedback.neutral{background:#213b44;color:var(--ink)}
+
+.essay-reference{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.essay-reference summary{cursor:pointer;font-weight:700}.essay-reference p{white-space:pre-line;line-height:1.6;margin:12px 0 0}

@@ -15,7 +15,7 @@
       id: 'all',
       group: 'final',
       title: 'Visual Programming - Complete',
-      subtitle: '155 slots across the PDF, modules, and Midterm Exam; 132 have answer keys.',
+      subtitle: '155 slots across the PDF, modules, and Midterm Exam; 150 have answer keys.',
       questions: finalExamQuestions
     },
     ...assessmentOrder.map(assessment => ({
@@ -90,9 +90,15 @@
       const saved = JSON.parse(localStorage.getItem(storageKey));
       if (!saved || !Array.isArray(saved.order) || !saved.answered) return null;
       if (!saved.order.every(id => byId.has(id))) return null;
+      const answered = { ...saved.answered };
+      for (const [id, response] of Object.entries(answered)) {
+        const question = byId.get(id);
+        if ((question.type === 'choice' || question.type === 'match') && response?.correct === null) delete answered[id];
+      }
       return {
         ...freshState(saved.order, saved.mode || 'assessment', saved.assessmentId || 'all', saved.scopeLabel || 'Visual Programming - Complete'),
-        ...saved
+        ...saved,
+        answered
       };
     } catch {
       return null;
@@ -248,6 +254,16 @@
     textarea.setAttribute('aria-label', 'Written response');
     textarea.addEventListener('input', () => { state.answered[question.id] = { correct: null, response: textarea.value }; persist(); });
     $('answerArea').append(textarea);
+    if (question.referenceAnswer) {
+      const details = document.createElement('details');
+      details.className = 'essay-reference';
+      const summary = document.createElement('summary');
+      summary.textContent = 'Show sample answer (ungraded)';
+      const example = document.createElement('p');
+      example.textContent = question.referenceAnswer;
+      details.append(summary, example);
+      $('answerArea').append(details);
+    }
   }
 
   function renderChoices(question, savedAnswer) {
@@ -287,7 +303,7 @@
 
       if (savedAnswer) {
         const originalLetter = letters[originalIndex];
-        if (question.type !== 'ungraded' && question.answer.includes(originalLetter)) button.classList.add('correct-answer');
+        if (question.type !== 'ungraded' && (question.acceptedAnswers || question.answer).includes(originalLetter)) button.classList.add('correct-answer');
         else if (selected && question.type !== 'ungraded') button.classList.add('wrong-answer');
       } else {
         button.addEventListener('click', () => {
@@ -376,7 +392,7 @@
       stored.selectedMatches = selectedMatches.slice();
     } else {
       const selectedLetters = selectedChoiceIndexes.map(index => letters[index]).sort().join('');
-      correct = selectedLetters === question.answer.slice().sort().join('');
+      correct = question.acceptedAnswers ? question.acceptedAnswers.includes(selectedLetters) : selectedLetters === question.answer.slice().sort().join('');
       stored.selectedChoiceIndexes = selectedChoiceIndexes.slice();
     }
     state.answered[question.id] = { correct, ...stored };
@@ -406,7 +422,7 @@
       answer.textContent = question.pairs.map(([prompt, value]) => `${prompt} → ${value}`).join('\n');
     } else {
       const choiceOrder = state.choiceOrders[question.id] || question.options.map((_, index) => index);
-      answer.textContent = question.answer.map(originalLetter => {
+      answer.textContent = (question.acceptedAnswers || question.answer).map(originalLetter => {
         const originalIndex = letters.indexOf(originalLetter);
         const displayedLetter = letters[choiceOrder.indexOf(originalIndex)];
         return `${displayedLetter}. ${question.options[originalIndex]}`;

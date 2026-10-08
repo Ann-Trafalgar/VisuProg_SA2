@@ -1906,15 +1906,18 @@
     "globalNumber": 105,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "OpenGLs architecture is a client-server model where the client is the application and the server is the_______________",
     "options": [
-      "Video Card",
       "Device Driver",
+      "Video Card",
       "Code Server",
       "Internet Server"
     ],
-    "answer": []
+    "answer": [
+      "B"
+    ],
+    "explanation": "In this simplified client/server model, the application sends rendering work to the graphics system or GPU; Video Card is the closest option."
   },
   {
     "id": "visual-midterm-14",
@@ -1958,15 +1961,18 @@
     "globalNumber": 108,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "How man bits does the glLineStipple() function pattern represent to describe a line pattern.",
     "options": [
       "64",
-      "16",
+      "32",
       "8",
-      "32"
+      "16"
     ],
-    "answer": []
+    "answer": [
+      "D"
+    ],
+    "explanation": "glLineStipple uses a 16-bit pattern."
   },
   {
     "id": "visual-midterm-17",
@@ -1974,14 +1980,17 @@
     "globalNumber": 109,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "In the OpenGL Rendering pipeline it is where the parts of the primitive that are determined to be potentially visible are sent to a fixed-function subsystem called the rasterizer.",
     "options": [
       "Rasterizer",
-      "Primitive Assembly",
-      "Per Sample Operations"
+      "Per Sample Operations",
+      "Primitive Assembly"
     ],
-    "answer": []
+    "answer": [
+      "C"
+    ],
+    "explanation": "Primitive assembly forms primitives before clipping and rasterization."
   },
   {
     "id": "visual-midterm-18",
@@ -2077,15 +2086,18 @@
     "globalNumber": 115,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "It determines the address of a variable, and you can then assign that address to a pointer variable",
     "options": [
       "dot operator",
-      "& operator",
       "* operator",
+      "& operator",
       "{}"
     ],
-    "answer": []
+    "answer": [
+      "C"
+    ],
+    "explanation": "The address-of operator (&) obtains a variable’s address."
   },
   {
     "id": "visual-midterm-24",
@@ -2195,14 +2207,17 @@
     "globalNumber": 122,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "In the OpenGL Rendering pipeline it is the stage that handles the processing of individual vertices.",
     "options": [
       "Primitive Assembly",
-      "Per-Sample Operations",
-      "Vertex Shader"
+      "Vertex Shader",
+      "Per-Sample Operations"
     ],
-    "answer": []
+    "answer": [
+      "B"
+    ],
+    "explanation": "The vertex shader processes individual vertices."
   },
   {
     "id": "visual-midterm-31",
@@ -2244,7 +2259,7 @@
     "globalNumber": 125,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "In the OpenGL Rendering pipeline it is where increases the number of polygons to smoothen out the object.",
     "options": [
       "Primitive Assembly",
@@ -2252,7 +2267,10 @@
       "Rasterization",
       "TEsselation"
     ],
-    "answer": []
+    "answer": [
+      "D"
+    ],
+    "explanation": "Tessellation subdivides patches into more primitives, increasing polygon detail. The source export marked this choice wrong, but it matches the OpenGL pipeline description."
   },
   {
     "id": "visual-midterm-34",
@@ -2260,15 +2278,22 @@
     "globalNumber": 126,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "Choose a correct statement about C Language Functions.",
     "options": [
       "A function name can start with an Underscore( _ ) or A to Z or a to z.",
       "All the above.",
-      "A function name can not be same as a predefined C Keyword.",
-      "Default return type of any function is an Integer."
+      "Default return type of any function is an Integer.",
+      "A function name can not be same as a predefined C Keyword."
     ],
-    "answer": []
+    "answer": [
+      "D"
+    ],
+    "explanation": "A C function name cannot be a keyword. Names beginning with an underscore can be syntactically valid, but are reserved for the implementation at file scope, so the reviewer also accepts that option. Modern C does not default a missing return type to int.",
+    "acceptedAnswers": [
+      "A",
+      "D"
+    ]
   },
   {
     "id": "visual-midterm-35",
@@ -2312,13 +2337,16 @@
     "globalNumber": 129,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "The coordinates of x and y in the glutKeyboardFunc() tells s the position of row and colum on the screen where the key was pressed",
     "options": [
       "True",
       "False"
     ],
-    "answer": []
+    "answer": [
+      "B"
+    ],
+    "explanation": "The keyboard callback x and y values are mouse coordinates when the key event occurred, not row and column numbers."
   },
   {
     "id": "visual-midterm-38",
@@ -2353,15 +2381,18 @@
     "globalNumber": 132,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "What data does the third parameter for the glVertexPointer() is for",
     "options": [
       "The data type of each coordinate in the array",
-      "The number of coordinates per vertex",
       "The byte offset between consecutive vertices",
+      "The number of coordinates per vertex",
       "A pointer to the first element of the vertex array"
     ],
-    "answer": []
+    "answer": [
+      "B"
+    ],
+    "explanation": "The third glVertexPointer parameter is stride, measured in bytes between successive vertices."
   },
   {
     "id": "visual-midterm-41",
@@ -2423,7 +2454,7 @@
     "globalNumber": 136,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "What coordinate values does a 3D vertex require, and what do they represent?",
     "options": [
       "x, y, z — position along three spatial axes",
@@ -2431,7 +2462,10 @@
       "width, height — a 2D bounding box",
       "u, v — texture coordinates only"
     ],
-    "answer": []
+    "answer": [
+      "A"
+    ],
+    "explanation": "A 3D position uses x, y, and z coordinates."
   },
   {
     "id": "visual-midterm-45",
@@ -2457,15 +2491,18 @@
     "globalNumber": 138,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "A developer wants to procedurally generate extra geometry (e.g., for fur or explosion effects) from existing primitives before rasterization. Which optional pipeline stage should they use?",
     "options": [
-      "Vertex Specification",
       "Geometry Shader",
+      "Vertex Specification",
       "Vertex Shader",
       "Per-Sample Operations"
     ],
-    "answer": []
+    "answer": [
+      "A"
+    ],
+    "explanation": "A geometry shader can generate additional primitives from an input primitive before rasterization."
   },
   {
     "id": "visual-midterm-47",
@@ -2491,15 +2528,18 @@
     "globalNumber": 140,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "A student's display() function contains glClear, glBegin/glEnd, and vertex calls, but the window stays blank until they click or resize it. What is most likely missing, and why?",
     "options": [
       "glBegin() — without it vertices are undefined",
-      "glFlush() — without it, buffered commands may not execute/display immediately",
       "glutCreateWindow() — without it there's no window at all",
+      "glFlush() — without it, buffered commands may not execute/display immediately",
       "glutInit() — without it nothing compiles"
     ],
-    "answer": []
+    "answer": [
+      "C"
+    ],
+    "explanation": "Among the listed choices, glFlush submits buffered OpenGL commands for execution. Double-buffered programs may also need a buffer swap."
   },
   {
     "id": "visual-midterm-49",
@@ -2579,15 +2619,18 @@
     "globalNumber": 145,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "Bitmap fonts are particularly suitable for small readable text in 2D overlays or ____.",
     "options": [
       "vertex buffers",
-      "index arrays",
       "HUDs",
+      "index arrays",
       "depth tests"
     ],
-    "answer": []
+    "answer": [
+      "B"
+    ],
+    "explanation": "Bitmap fonts are commonly used for fixed-size labels in 2D overlays and HUDs."
   },
   {
     "id": "visual-midterm-54",
@@ -2595,15 +2638,18 @@
     "globalNumber": 146,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "Which GLUT font is a scalable stroke font rendered using line segments?",
     "options": [
-      "GLUT_BITMAP_HELVETICA_12",
       "GLUT_STROKE_ROMAN",
+      "GLUT_BITMAP_HELVETICA_12",
       "GLUT_BITMAP_TIMES_ROMAN_10",
       "GLUT_BITMAP_9_BY_15"
     ],
-    "answer": []
+    "answer": [
+      "A"
+    ],
+    "explanation": "GLUT_STROKE_ROMAN is a stroke font whose glyphs are line segments."
   },
   {
     "id": "visual-midterm-55",
@@ -2611,15 +2657,18 @@
     "globalNumber": 147,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "The immediate-mode point() sample specifies how many point vertices?",
     "options": [
-      "3",
+      "4",
       "2",
       "20",
-      "4"
+      "3"
     ],
-    "answer": []
+    "answer": [
+      "A"
+    ],
+    "explanation": "The Module 04 point() sample contains four glVertex2f calls within GL_POINTS."
   },
   {
     "id": "visual-midterm-56",
@@ -2663,15 +2712,18 @@
     "globalNumber": 150,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "In defaultDisplay(), which functions are called after the color is set in the immediate-mode sample?",
     "options": [
       "glVertexPointer() and glColorPointer()",
-      "point() and triangle()",
       "glutKeyboardFunc() and glFlush()",
+      "point() and triangle()",
       "triangleleft() and rectangle()"
     ],
-    "answer": []
+    "answer": [
+      "C"
+    ],
+    "explanation": "The immediate-mode defaultDisplay() sample calls point() and triangle() after setting the color."
   },
   {
     "id": "visual-midterm-59",
@@ -2679,15 +2731,18 @@
     "globalNumber": 151,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "Which set names all four triangle functions in that sample?",
     "options": [
-      "triangleleft, triangleright, triangleup, triangledown",
-      "triangle1, triangle2, triangle3, triangle4",
       "left, right, top, bottom",
+      "triangle1, triangle2, triangle3, triangle4",
+      "triangleleft, triangleright, triangleup, triangledown",
       "displayTriangles, rectangle, point, triangle"
     ],
-    "answer": []
+    "answer": [
+      "C"
+    ],
+    "explanation": "Module 04 declares these four triangle functions in the multi-primitive sample."
   },
   {
     "id": "visual-midterm-60",
@@ -2695,7 +2750,7 @@
     "globalNumber": 152,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "How many triangle functions are called by defaultDisplay() in the multi-primitive sample?",
     "options": [
       "3",
@@ -2703,7 +2758,10 @@
       "12",
       "4"
     ],
-    "answer": []
+    "answer": [
+      "D"
+    ],
+    "explanation": "The multi-primitive defaultDisplay() calls four triangle functions before rectangle()."
   },
   {
     "id": "visual-midterm-61",
@@ -2736,6 +2794,7 @@
     "type": "essay",
     "text": "Linda initially creates an OpenGL application using glBegin(), glVertex(), and glEnd() to draw several geometric primitives. The application is later improved by adding keyboard and mouse interaction through GLUT callbacks and by converting the graphical data into vertex arrays.\n\nExplain how these improvements change the structure, interactivity, and rendering efficiency of the OpenGL application. \n\nIn your answer, discuss:\n\n• how vertices and geometric primitives are used to construct graphical objects;\n\n• how GLUT callback functions allow the program to respond to keyboard or mouse events; and\n\n• why vertex arrays can be more efficient than repeatedly specifying vertices using glBegin() and glEnd().\n\nSupport your explanation using appropriate OpenGL or GLUT functions discussed in Modules 1–4.",
     "options": [],
-    "answer": []
+    "answer": [],
+    "referenceAnswer": "Vertices define positions for graphical objects. In immediate mode, glBegin(GL_TRIANGLES) chooses a primitive, glVertex*() submits its vertices, and glEnd() closes the batch. Other primitive modes join vertices into points, lines, or polygons.\n\nGLUT callbacks make the program interactive. Register keyboard and mouse handlers with glutKeyboardFunc() and glutMouseFunc(). When input occurs, a callback updates application state, and glutPostRedisplay() requests another frame so the scene reflects the change.\n\nVertex arrays store vertex data in arrays instead of issuing a separate glVertex*() call for every vertex on every draw. The program describes the layout with glVertexPointer(), enables the array, then draws a group of primitives with glDrawArrays() or glDrawElements(). Batching reduces per-vertex call overhead and can make rendering more efficient, especially when the data is reused."
   }
 ]
