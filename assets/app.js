@@ -15,7 +15,7 @@
       id: 'all',
       group: 'final',
       title: 'Visual Programming - Complete',
-      subtitle: '155 slots across the PDF, modules, and Midterm Exam; 131 have answer keys.',
+      subtitle: '155 slots across the PDF, modules, and Midterm Exam; 132 have answer keys.',
       questions: finalExamQuestions
     },
     ...assessmentOrder.map(assessment => ({

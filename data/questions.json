@@ -1805,7 +1805,7 @@
     "globalNumber": 99,
     "assessment": "MIDTERM EXAM",
     "category": "MIDTERM EXAM: Graphics and Visual Programming",
-    "type": "ungraded",
+    "type": "choice",
     "text": "How many parameters does glutFullScreen have?",
     "options": [
       "0",
@@ -1814,7 +1814,10 @@
       "4",
       "3"
     ],
-    "answer": []
+    "answer": [
+      "A"
+    ],
+    "explanation": "glutFullScreen(void) takes no parameters."
   },
   {
     "id": "visual-midterm-8",
